@@ -28,7 +28,7 @@ export function KittenCard({
             md:grid-cols-[auto_auto]
         ">
             <Image
-                src={`/kittens/${name.toLowerCase()}.jpg`}
+                src={process.env.NODE_ENV === 'production' ? `/minim-ow-bar/kittens/${name.toLowerCase()}.jpg` : `/kittens/${name.toLowerCase()}.jpg`}
                 width={160}
                 height={160}
                 className="
