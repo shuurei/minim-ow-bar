@@ -1,0 +1,5 @@
+export { default as MaleIcon } from './male.png'
+export { default as FemaleIcon } from './female.png'
+export { default as OldIcon } from './old.png'
+export { default as PersonalityIcon } from './personality.png'
+export { default as RaceIcon } from './race.png'

@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+    --font-noto-sans: "Noto Sans", sans-serif; 
+
+    --color-primary-100: #ffedd5;
+    --color-primary-200: #fed7aa;
+    --color-primary-300: #fdba74;
+    --color-primary-400: #fb923c;
+    --color-primary-500: #f97316;
+    --color-primary-600: #ea580c;
+    --color-primary-700: #c2410c;
+    --color-primary-800: #9a3412;
+    --color-primary-900: #7c2d12;
+}
+
+@layer base {
+    * {
+        box-sizing: border-box;
+        font-family: var(--font-noto-sans);
+    }
+
+    h1 {
+        font-size: var(--text-2xl);
+    }
+
+    h2 {
+        font-size: var(--text-xl);
+    }
+
+    h3 {
+        font-size: var(--text-lg);
+    }
+
+    h4 {
+        font-size: var(--text-base);
+    }
+
+    h5 {
+        font-size: var(--text-sm);
+    }
+
+    h6 {
+        font-size: var(--text-xs);
+    }
+
+    &::selection {
+        color: #fff7ed;
+        background: var(--color-primary-900);
+    }
+
+    input, textarea {
+        background-color: white;
+        border: 2px var(--color-primary-500) solid;
+        outline: none;
+        padding: 1px 2px;
+
+        transition: .2s;
+
+        &:focus {
+            border-color: var(--color-primary-900);
+        }
+    }
+
+    #__next {
+        display: flex;
+        flex-direction: column;
+        min-height: 100svh;
+    }
+}
+
+@utility shadow-block {
+    --tw-shadow: 5px 5px 0 0 var(--tw-shadow-color);
+    box-shadow: var(--tw-shadow);
+}
+
+@utility underline-slide {
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: -6px;
+        left: 0;
+        height: 3px;
+        background-color: currentColor;
+        width: 0;
+        transition: width .2s ease-out, background-color .2s ease-out;
+    }
+
+    &:hover::after,
+    &.active::after {
+        width: 100%;
+    }
+}
