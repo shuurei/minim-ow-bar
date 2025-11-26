@@ -3,7 +3,7 @@ import NavLink from './header-nav-link'
 export const NAV_LINKS = [
     { label: 'Accueil', href: '/' },
     { label: 'Les chatons', href: '/kittens' },
-    { label: 'Réservations', href: '/reservation' },
+    { label: 'Réservations', href: '/reservations' },
     { label: 'La carte', href: '/menu' },
     { label: 'FAQ', href: '/faq' },
     { label: 'Contact', href: '/contact' },
